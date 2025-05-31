@@ -17,10 +17,10 @@ output "jfrog_url" {
   value     = var.jfrog_server ? join ("", ["http://", aws_instance.jfrog_ec2_instance[0].public_dns, ":", "8081"]) : null
 }
 
-# print the url of the jfrog server
-output "jenkins_ssh_connection_command" {
-  value     = module.jenkins.jenkins_ssh_connection_command
-}
-output "sonar_url" {
-  value = module.jenkins.sonar_url
-}
+# # print the url of the jfrog server
+# output "jenkins_ssh_connection_command" {
+#   value     = module.jenkins.jenkins_ssh_connection_command
+# }
+# output "sonar_url" {
+#   value = module.jenkins.sonar_url
+# }
